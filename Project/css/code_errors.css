@@ -1,0 +1,9 @@
+img {
+    width: 600;
+    height: 300;
+    border: 2px dotted rgb(255, 0, 0);
+}
+
+h3 {
+    text-align: center;
+}
