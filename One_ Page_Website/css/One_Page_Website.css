@@ -1,0 +1,14 @@
+p {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 25px;
+}
+
+ .info {
+    width: 70%;
+    margin: 10px 1em;
+    border-top: 1px double #46c00e ;
+    border-right: 2px double #27ad2e;
+    border-bottom: 2px double #20a820;
+    border-left: 1px double #23a017;
+    border-radius: 5px;
+}
