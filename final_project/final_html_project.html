@@ -3,8 +3,9 @@
     <!--HEAD-->
     <head>
         <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width">
-        <link rel="stylesheet" href="">
+        <meta name="viewport" content="width=device-width" />
+        <title>Jose Gonzalez</title>
+        <link rel="stylesheet" type="text/css" href="./final_project.css">
     </head>
     <!--/HEAD-->
 
@@ -13,7 +14,7 @@
 
         <!--NAVBAR-->
         <div class="navbar">
-            <a href="#home">Home</a>
+            <a class="active" href="#home">Home</a>
             <a href="#about">About</a>
             <a href="#github">Github</a>
             <a href="#contact">Contact</a>
@@ -25,7 +26,7 @@
         <!--BACKGROUND VIDEO-->
         <div id="home">
             <video muted autoplay loop id="opening_video">
-                <source src="./video/opening_video.mp4" type="video/mp4" alt="">
+                <source src="./video/opening_video.mp4" type="video/mp4" alt="Your browser does not support HTML5 video.">
             </video>
         </div>
         <!--/BACKGROUND VIDEO-->
@@ -33,29 +34,86 @@
         <!--VIDEO OVERLAY-->
         <div class="video_overlay">
             <h1 class="video_text">Jose Gonzalez's Portfolio</h1>
-            <p class="center">
-                <q>The mind adapts and converts to its own purposes the obstacle to our acting. 
-                    <br> impediment to action advances action. What stands in the way becomes the way.
-                </q>
-                <br> -Marcus Aurelius
-                <br> 
-                <br> My name is Jose. Welcome to my portfolio website. On it, I will tell you about my background and experience.
-                <br>
-            </p>
+            <strong>
+                <p class="center">
+                    <q>The mind adapts and converts to its own purposes the obstacle to our acting. 
+                        <br> impediment to action advances action. What stands in the way becomes the way.
+                    </q>
+                    <br> -Marcus Aurelius
+                    <br> 
+                    <br> My name is Jose. Welcome to my portfolio website. On it, I will tell you about my background and experience.
+                    <br>
+                </p>
+            </strong>
         </div>
         <!--/VIDEO OVERLAY-->
 
         <!--ABOUT-->
         <div class="row" id="about">
             <!--LEFT COLOUMN-->
-            <div class="column_1"
-                <img src="./images/about.jpg" alt="please check internet connection">
+            <div class="column_2">
+               <img src="./images/about.jpg" alt="about image">
             </div>      
+            <!--RIGHT COLUMN-->
+            <div class="column_1">
+                <h1>About</h1>
+                <p>
+                    I am a software developer who loves to code! As a 
+                    <br>
+                    <br>
+                    <br>
+                </p>
+            </div>
         </div>
-        <!--RIGHT COLUMN-->
-        <div ></div>
-        <!--/ABOUT-->
-        
+        <!--ABOUT-->
+
+        <!--GITHUB-->
+        <div class="row" id="github">
+            <!--LEFT COLUMN-->
+            <div class="column_1">
+                <h1>Github</h1>
+                <p>
+                    View my coding projects on my Github profile here:
+                    <br>
+                    <p class="center"><a href="https://github.com/bohdilong" target="blank">Github bohdilong</a></p>
+                </p>
+            </div>
+            <!--RIGHT COLUMN-->
+            <div class="column_2">
+                <a href="https://github.com/bohdilong" target="blank"><img src="./images/github.jpg" alt="github photo"></a>
+            </div>
+        </div>
+        <!--/GITHUB-->
+
+        <!--CONTACT-->
+        <div class="row" id="contact">
+            <!--CONTACT IMG, LEFT COLUMN-->
+            <div class="column_2 column_tall">
+                <img src="./images/contact.jpeg" alt="Contact_Image">
+            </div>
+            <!--CONTACT FORM, RIGHT COLUMN-->
+            <div class="column_1 column_tall">
+                <h1>Contact</h1>
+                <form action="" method="POST">
+                    <label>Name:</label>
+                        <input type="text"  placeholder="Please enter your name here">
+                    <label>Email:</label>
+                        <input type="text" id="Email" name="Email" placeholder="joe@example.com">
+                    <label>Message:</label>
+                        <input type="text" id="Message" name="Message" placeholder="Please write your message here">
+                        <input type="submit" value="SUBMIT">
+                </form>
+            </div>
+        </div>
+        <!--/CONTACT-->
+
+        <!--FOOTER-->
+        <footer>
+            <p>
+                <p class="center">&copy Prosper Consulting Inc., <a href="https://www.learncodinganywhere.com/" target="_blank">the Tech Academy</a></p>
+                <br>
+            </p>
+        </footer>
     </body>
     <!--/BODY-->
 </html>
