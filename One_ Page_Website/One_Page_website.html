@@ -4,6 +4,7 @@
         <meta charset="utf-8">
         <title>Iconic Car Rentals</title>
         <link rel="stylesheet" href="./css/One_Page_Website.css">
+        <script src="./JS/one_page_website.js"></script>
     </head>
     <body>
         <img src="./images/favicon.png">
@@ -33,12 +34,12 @@
         <section>
             <div id="gallery">
                 <h1>Gallery</h1>
-                <div>
+                <div class="row">
 
                     <!--PHOTO-CONTAINER 1-->
-                    <div>
+                    <div class="column">
                         <div>
-                            <img src="images/thumbnail_1.jpg" alt="James Bond">
+                            <img src="images/thumbnail_1.jpg" onclick="openModal();currentSlide(1)" alt="James Bond">
                             <div>
                                 <p>Go to your next high school reunion in style</p>
                             </div>
@@ -46,9 +47,9 @@
                     </div>
                     <!--END PHOTO-CONTAINER 1-->
                      <!--PHOTO-CONTAINER 2-->
-                     <div>
+                     <div class="column">
                         <div>
-                            <img src="images/thumbnail_2.jpg" alt="Back to the Future">
+                            <img src="images/thumbnail_2.jpg" onclick="openModal();currentSlide(2)" alt="Back to the Future">
                             <div>                                
                                 <p>Have you ever wanted to time travel?</p>
                             </div>
@@ -56,9 +57,9 @@
                     </div>
                     <!--END PHOTO-CONTAINER 2-->
                      <!--PHOTO-CONTAINER 3-->
-                     <div>
+                     <div class="column">
                         <div>
-                            <img src="images/thumbnail_3.jpg" alt="Dukes of Hazard">
+                            <img src="images/thumbnail_3.jpg" onclick="openModal();currnentSlide(3)" alt="Dukes of Hazard">
                             <div>                                
                                 <p>Try not to launch it in the air.</p>
                             </div>
@@ -66,9 +67,9 @@
                     </div>
                     <!--END PHOTO-CONTAINER 3-->
                      <!--PHOTO-CONTAINER 4-->
-                     <div>
+                     <div class="column">
                         <div>
-                            <img src="images/thumbnail_4.jpg" alt="Jurassic Park">
+                            <img src="images/thumbnail_4.jpg" onclick="openModal();currentSlide(4)" alt="Jurassic Park">
                             <div>                                
                                 <p>Drive fast to avoid being eaten.</p>
                             </div>
@@ -76,9 +77,9 @@
                     </div>
                     <!--END PHOTO-CONTAINER 4-->
                      <!--PHOTO-CONTAINER 5-->
-                     <div>
+                     <div class="column">
                         <div>
-                            <img src="images/thumbnail_5.jpg" alt="gostbusters">
+                            <img src="images/thumbnail_5.jpg" onclick="openModal();currentSlide(5)" alt="gostbusters">
                             <div>                                
                                 <p>Fight ghosts in style.</p>
                             </div>
@@ -86,9 +87,9 @@
                     </div>
                     <!--END PHOTO-CONTAINER 5-->
                      <!--PHOTO-CONTAINER 6-->
-                     <div>
+                     <div class="column">
                         <div>
-                            <img src="images/thumbnail_6.jpg" alt="Knight Rider">
+                            <img src="images/thumbnail_6.jpg" onclick="openModal();currentSlide(6)" alt="Knight Rider">
                             <div>                                
                                 <p>Fair warning. This car is a bit of a chatter box. </p>
                             </div>
@@ -96,9 +97,9 @@
                     </div>
                     <!--END PHOTO-CONTAINER 6-->
                      <!--PHOTO-CONTAINER 7-->
-                     <div>
+                     <div class="column">
                         <div>
-                            <img src="images/thumbnail_7.jpg" alt="batman">
+                            <img src="images/thumbnail_7.jpg" onclick="openModal();currentSlide(7)" alt="batman">
                             <div>                                
                                 <p>Feel like the ultimate hero in this car.</p>
                             </div>
@@ -106,9 +107,9 @@
                     </div>
                     <!--END PHOTO-CONTAINER 7-->
                      <!--PHOTO-CONTAINER 8-->
-                     <div>
+                     <div class="column">
                         <div>
-                            <img src="images/thumbnail_8.jpg" alt="Smoky and the Bandit">
+                            <img src="images/thumbnail_8.jpg" onclick="openModal();currentSlide(8)" alt="Smoky and the Bandit">
                             <div>                                
                                 <p>This car's fast. Trust me.</p>
                             </div>
@@ -116,6 +117,87 @@
                     </div>
                     <!--END PHOTO-CONTAINER 8-->                    
 
+                </div>
+                <!--LightBox-->
+                <div id="myModal" class="modal">
+                    <span class="close cursor" onclick="closeModal()">&times;</span>
+                    <div class="modal-content">
+
+                        <div class="mySlides">
+                            <div class="numbertext">1/8</div>
+                            <img src="images/thumbnail_1.jpg" style="width: 100%;">
+                        </div>
+
+                        <div class="mySlides">
+                            <div class="numbertext">2/8</div>
+                            <img src="images/thumbnail_2.jpg" style="width: 100%;">
+                        </div>
+
+                        <div class="mySlides">
+                            <div class="numbertext">3/8</div>
+                            <img src="images/thumbnail_3.jpg" style="width: 100%;">
+                        </div>
+
+                        <div class="mySlides">
+                            <div class="numbertext">4/8</div>
+                            <img src="images/thumbnail_4.jpg" style="width: 100%;">
+                        </div>
+
+                        <div class="mySlides">
+                            <div class="numbertext">5/8</div>
+                            <img src="images/thumbnail_5.jpg" style="width: 100%;">
+                        </div>
+
+                        <div class="mySlides">
+                            <div class="numbertext">6/8</div>
+                            <img src="images/thumbnail_6.jpg" style="width: 100%;">
+                        </div>
+
+                        <div class="mySlides">
+                            <div class="numbertext">7/8</div>
+                            <img src="images/thumbnail_7.jpg" style="width: 100%;">
+                        </div>
+
+                        <div class="mySlides">
+                            <div class="numbertext">8/8</div>
+                            <img src="images/thumbnail_8.jpg" style="width: 100%;">
+                        </div>
+                        
+                        <!--next and controls-->
+                        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+                        <!--caption text-->
+                        <div class="caption-container">
+                            <p id="caption"></p>
+                        </div>
+
+                        <!--thumbnail image controls-->
+                        <div class="column">
+                            <img class="image-controls" src="images/thumbnail_1.jpg" onclick="currentslide(1)" alt="">
+                        </div>
+                        <div class="column">
+                            <img class="image-controls" src="images/thumbnail_2.jpg" onclick="currentslide(2)" alt="">
+                        </div>
+                        <div class="column">
+                            <img class="image-controls" src="images/thumbnail_3.jpg" onclick="currentslide(3)" alt="">
+                        </div>
+                        <div class="column">
+                            <img class="image-controls" src="images/thumbnail_4.jpg" onclick="currentslide(4)" alt="">
+                        </div>
+                        <div class="column">
+                            <img class="image-controls" src="images/thumbnail_5.jpg" onclick="currentslide(5)" alt="">
+                        </div>
+                        <div class="column">
+                            <img class="image-controls" src="images/thumbnail_6.jpg" onclick="currentslide(6)" alt="">
+                        </div>
+                        <div class="column">
+                            <img class="image-controls" src="images/thumbnail_7.jpg" onclick="currentslide(7)" alt="">
+                        </div>
+                        <div class="column">
+                            <img class="image-controls" src="images/thumbnail_8.jpg" onclick="currentslide(8)" alt="">
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -136,7 +218,7 @@
             </div>
         </div>    
         <!--END VIDEO 2-->
-
+       
 
 
         <!--ACCOUNT INFO-->
