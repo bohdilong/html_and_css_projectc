@@ -12,7 +12,7 @@ var slideIndex = 1;
 showslides(slideIndex);
 
 //next and previous controls
-function plusSlide(n) {
+function plusSlides(n) {
     showslides(slideIndex += n);
 }
 
@@ -23,8 +23,8 @@ function currentSlide(n) {
 
 function showslides(n) {
     var i;
-    var slides = document.getElementsByClassName("myslides");
-    var dots = document.getElementsByClassName("demo");
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("image-controls");
     var captionText = document.getElementById("caption");
     if (n > slides.length) {slideIndex = 1}
     if (n < 1) {slideIndex = slides.length}
@@ -35,5 +35,6 @@ function showslides(n) {
         dots[i].className = dots[i].className.replace("active", "");
     }
     slides[slideIndex-1].style.display = "block";
+    dots[slideIndex-1].className += "active";
     captionText.innerHTML = dots[slideIndex-1].alt;
 }

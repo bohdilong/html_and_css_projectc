@@ -48,7 +48,7 @@ p {
     position: relative;
     background-color: #fefefe;
     margin: auto;
-    padding: 0;
+    padding: 5px;
     width: 90%;
     max-width: 1200px;
 }
