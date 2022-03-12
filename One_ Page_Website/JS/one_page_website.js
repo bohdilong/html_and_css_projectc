@@ -38,3 +38,11 @@ function showslides(n) {
     dots[slideIndex-1].className += "active";
     captionText.innerHTML = dots[slideIndex-1].alt;
 }
+
+function validateForm() {
+    let x = document.forms["myForm"]["fname"].value;
+    if (x == "") {
+        alert("Name must be filled out");
+        return false;
+    }
+}

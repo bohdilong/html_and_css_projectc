@@ -6,6 +6,7 @@
         <meta name="viewport" content="width=device-width" />
         <title>Jose Gonzalez</title>
         <link rel="stylesheet" type="text/css" href="./final_project.css">
+       
     </head>
     <!--/HEAD-->
 
@@ -15,9 +16,10 @@
         <!--NAVBAR-->
         <div class="navbar">
             <a class="active" href="#home">Home</a>
+            <a href="#slideshow">Slideshow</a>
             <a href="#about">About</a>
             <a href="#github">Github</a>
-            <a href="#contact">Contact</a>
+            <a onclick="openForm()" ondblclick="closeForm()" class="contact">Contact</a>
         </div>
         <!--/NAVBAR-->
         <br>
@@ -48,6 +50,45 @@
         </div>
         <!--/VIDEO OVERLAY-->
 
+        <!--SLIDESHOW-->
+        <div id="Slideshow">
+            <div id="Slideshow_Background">
+                <div id="Slideshow_Container">
+                    <div class="mySlides fade">
+                        <img class="Slideshow_Images" src="images/personal_photo.png" alt="self photo">
+                        <div class="text">I'm available to assist you on your project!</div>
+                    </div> 
+                    <div class="mySlides fade">
+                        <img class="Slideshow_Images" src="images/HTML_CSS_and_JavaScript.jpeg" alt="html,css,JavaScript">
+                        <div class="text">I am a full-stack software developer,<br> trained in HTML, CSS, JavaScript,</div>
+                    </div>
+                    <div class="mySlides fade">
+                        <img class="Slideshow_Images" src="images/Python.png" alt="pyhton">
+                        <div class="text">the popular programming language Python,</div>
+                    </div>
+                   
+                    <div class="mySlides fade">
+                        <img class="Slideshow_Images" src="images/SQL_and_Database(1).jpg" alt="sql">
+                        <div class="text">back end development, databases and SQL.</div>
+                    </div>
+                    <div class="mySlides fade">
+                        <img class="Slideshow_Images" src="images/slide_contact.jpeg" alt="slide_contact">
+                        <div class="text"><a class="white-text contact" onclick="openForm()">Contact me now!</a></div>
+                    </div>
+                    <a class="Previous" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="Next" onclick="plusSlides(1)">&#10095;</a>
+                </div>
+                <br>
+                <div style="text-align: center;">
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
+                    <span class="dot" onclick="currentSlide(4)"></span>
+                    <span class="dot" onclick="currentSlide(5)"></span>
+                </div>
+            </div>
+        </div>
+        <!--/SLIDESHOW-->    
         <!--ABOUT-->
         <div class="row" id="about">
             <!--LEFT COLOUMN-->
@@ -87,23 +128,20 @@
         <!--/GITHUB-->
 
         <!--CONTACT-->
-        <div class="row" id="contact">
-            <!--CONTACT IMG, LEFT COLUMN-->
-            <div class="column_2 column_tall">
-                <img src="./images/contact.jpeg" alt="Contact_Image">
-            </div>
-            <!--CONTACT FORM, RIGHT COLUMN-->
-            <div class="column_1 column_tall">
-                <h1>Contact</h1>
+        <div  id="contact">
+            <button onclick="openForm()" class="Pop_Up_Button">CONTACT</button>
+            <div class="form-popup" id="myForm">
                 <form action="" method="POST">
+                    <h1>Contact</h1>
                     <label>Name:</label>
                         <input type="text"  placeholder="Please enter your name here">
                     <label>Email:</label>
                         <input type="text" id="Email" name="Email" placeholder="joe@example.com">
                     <label>Message:</label>
                         <input type="text" id="Message" name="Message" placeholder="Please write your message here">
-                        <input type="submit" value="SUBMIT">
-                </form>
+                    <button type="submit" class="btn">SUBMIT</button>
+                    <button type="button" class="btn cancel" onclick="closeForm()">CLOSE</button>        
+                </form> 
             </div>
         </div>
         <!--/CONTACT-->
@@ -115,6 +153,7 @@
                 <br>
             </p>
         </footer>
+        <script src="javascript.js"></script>
     </body>
     <!--/BODY-->
 </html>
